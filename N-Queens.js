@@ -42,22 +42,27 @@ const Log = {
  */
 function Validation(queens){
     console.log("\x1b[35m---- This is your solution ----\x1b[0m");
+    console.log(`${Log.bg.white}${Log.fg.black}`);
     const alpha = Array.from(Array(queens.size)).map((e, i) => i + 65);
     const alphabet = alpha.map((x) => String.fromCharCode(x));
     alphabet.unshift("  ")
+    
     console.log(...alphabet);
+    let bool = true;
     
     for(let i=0; i<queens.size; i++){
         let iterator = queens.values();
         let row = new Array();
+        queens.size % 2 == 0 ? bool = !bool : {}
         for(let j = 0; j<queens.size; j++){
+            bool = !bool
             if(iterator.next().value == i){
-                row.push(`${Log.fg.green}1${Log.reset}`)
+                row.push(`${bool? Log.bg.white : Log.bg.black}${Log.fg.red}1${Log.reset}`)
             }else{
-                row.push(`${Log.fg.yellow}0${Log.reset}`)
+                row.push(`${bool? Log.bg.white : Log.bg.black}${bool? Log.fg.black : Log.fg.white}0${Log.reset}`)
             }
         }
-        console.log(`${(i+1).toString().padStart(2, 0)}`, ...row);
+        console.log(`${Log.bg.white}${Log.fg.black}${(i+1).toString().padStart(2, 0)}`, ...row, `${Log.reset}`);
     }
 }
 
