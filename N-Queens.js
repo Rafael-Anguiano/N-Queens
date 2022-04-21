@@ -40,6 +40,7 @@ const Log = {
  * @param {Set} queens 
  * @returns {void}
  */
+
 function Validation(queens){
     console.log("\x1b[35m---- This is your solution ----\x1b[0m");
     console.log(`${Log.bg.white}${Log.fg.black}`);
@@ -106,7 +107,7 @@ function PlacingQueens(q, c, Dpos, Dneg, n, Disp){
             }
         }
         if(r+1 == Disp.length && count<1){
-            r = 0;
+            r = -1;
             count+=1;
         }
         //console.log(`Disponibles`);
@@ -152,28 +153,16 @@ function Queens(n){
     }
 }
 
-// Reading an Input
-const readline = require("readline");
+var myArgs = process.argv.slice(2);
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
-
-var n
-
-rl.question("Size of Board: ", function (answer) {
-    n = parseInt(answer)
-});
-
-// Waiting 5 seconds for the input to start
-setTimeout(() => {
+myArgs.map( e => {
+    console.log(`\n${Log.fg.cyan}****************N-Queens****************${Log.reset}`);
+    console.log(`Size of Board: ${Log.fg.white}${e}${Log.reset}`);
     const start = Date.now();
-    let q = Queens(n)
+    let q = Queens(e)
     const miliseconds = Date.now() - start;
     if(typeof q !== 'string'){
-        console.log("\x1b[36m****************N-Queens****************\x1b[0m");
-        console.log(`Seconds Elapsed: \x1b[32m${miliseconds /1000}\x1b[0m`);
+        console.log(`Seconds Elapsed: ${Log.fg.green}${miliseconds /1000}${Log.reset}`);
         Validation(q);
         console.log(" ")
         console.log("Queens positions by column:");    
@@ -181,5 +170,6 @@ setTimeout(() => {
     }else{
         console.log(Log.fg.red, q);
     }
-}, 5000)
+})
+
 
