@@ -41,7 +41,11 @@ To install this repository correctly follow the next steps.
 3. Once you have installed a runner, you are ready to start simulating and editing some code. To run this app use the next command in the terminal (Be sure you are in the correct directory).
 
 ```sh
-    node N-Queens.js
+    node index.js <boardSize1> <boardSize2> <boarSize...>
+```
+or
+```sh
+    node allForOne.js <boardSize1> <boardSize2> <boarSize...>
 ```
 --- 
 ## Notes:
@@ -56,6 +60,18 @@ To install this repository correctly follow the next steps.
 <img src="./Results-Ss/Case%2010.png" alt="Case 10" width="300"/><img src="./Results-Ss/Case%2026.png" alt="Case 26" width="300"/>
 <img src="./Results-Ss/Case%2045.png" alt="Case 45" width="300"/>
 
+---
+## Testing
+To start testing this repository
+1. Run the next `npm` command to install the dependencies.
+```sh
+    npm install
+```
+
+2. Run the test files.
+```sh
+    npm test
+```
 
 ---
 ## Developed By:

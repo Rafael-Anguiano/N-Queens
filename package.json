@@ -1,0 +1,23 @@
+{
+  "name": "n-queens",
+  "version": "1.0.0",
+  "description": "> * Place  N queens on said  N×N   chessboard so that **no two queens threaten each other**. \r > * The ***Queen*** can move in it's line or row, or diagonally, any number of squares",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafael-Anguiano/N-Queens.git"
+  },
+  "keywords": [],
+  "author": "Rafael Anguiano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafael-Anguiano/N-Queens/issues"
+  },
+  "homepage": "https://github.com/Rafael-Anguiano/N-Queens#readme"
+}
