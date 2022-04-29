@@ -12,17 +12,10 @@ This is my solution for this problem/puzzle.
  - Made using Javascript.
 
 ## Solution Explanation 
-For this solution we found very important the use of HashSet objets to reduce the complexity and simplify the validation of rows and diagonals. 
-> This is posible due to the `HashSet.has()` method which it's complexity is O(1).
+In this repository there are many solutions in different languages, the best solution is the one in ***JavaScript*** due to the use of HashSet tables, and it´s `has.()` method with complexity **$O(1)$**.
 
-|  Variable Name  | Description | Type |      Size      | Visual Explanation |
-|     :---:       |    :----:   | :--: |     :---:     | :-: |
-|       n         | Input Number  | Integer |     |  |
-|      Disp       | Numbers of the rows available | Array |    `n`   |  |
-|       q         | Stores the row of each queen  | HashSet |       `n`      | <img src="./Results-Ss/q.png" alt="q" width="200"/> |
-|      Dpos       | Stores the number of Positive Diagonal which is no more longer available        | HashSet |    `(n*2)-1`   | <img src="./Results-Ss/Dpos.png" alt="Dpos" width="200"/> |
-|      Dneg       | Stores the number of Negative Diagonal which is no more longer available | HashSet |    `(n*2)-1`   | <img src="./Results-Ss/Dneg.png" alt="Dneg" width="200"/> |
-
+* [JavaScript Solution](./JavaScript/)
+* [Python Solution](./Python/)
 
 ---
 ## Installation
@@ -30,28 +23,25 @@ To install this repository correctly follow the next steps.
 
 1. First of all, in the terminal put the next code to clone this repository:
 
-```sh
-    git clone https://github.com/Rafael-Anguiano/N-Queens.git
-    cd N-Queens/
-```
+    ```sh
+        git clone https://github.com/Rafael-Anguiano/N-Queens.git
+        cd N-Queens/
+    ```
 
 2. The next step is to make sure you have a way to run this code, in this situation we will use [Node.js](https://nodejs.org/en/download/), if you don't have it installed, we recommend you to download it.
 
 
-3. Once you have installed a runner, you are ready to start simulating and editing some code. To run this app use the next command in the terminal (Be sure you are in the correct directory).
+3. Once you have installed a runner, you are ready to start simulating and editing some code. To run this app use the next command in the terminal (Be sure you are in the directory of the language solution you want to run).
 
-```sh
-    node index.js <boardSize1> <boardSize2> <boarSize...>
-```
-or
-```sh
-    node allForOne.js <boardSize1> <boardSize2> <boarSize...>
-```
---- 
-## Notes:
- - There are many different ways to solve this puzzle with the same input.
- - The algorithm have a random percentage, this means you could receive a different solution each time.
- - The Queen can move in its line or row, or diagonally, any number of squares.
+    * For JavaScript: 
+    ```sh
+        node index.js <boardSize1> <boardSize2> <boarSize...>
+    ```
+
+    * For Python:
+    ```sh
+        python main.py <boardSize1> <boardSize2> <boarSize...>
+    ```
 
 ---
 ## ScreenShots of the Results
@@ -60,18 +50,11 @@ or
 <img src="./Results-Ss/Case%2010.png" alt="Case 10" width="300"/><img src="./Results-Ss/Case%2026.png" alt="Case 26" width="300"/>
 <img src="./Results-Ss/Case%2045.png" alt="Case 45" width="300"/>
 
----
-## Testing
-To start testing this repository
-1. Run the next `npm` command to install the dependencies.
-```sh
-    npm install
-```
-
-2. Run the test files.
-```sh
-    npm test
-```
+--- 
+## Notes:
+ - There are many different ways to solve this puzzle with the same input.
+ - The algorithm have a random percentage, this means you could receive a different solution each time.
+ - The Queen can move in its line or row, or diagonally, any number of squares.
 
 ---
 ## Developed By:

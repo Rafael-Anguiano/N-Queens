@@ -12,16 +12,16 @@ myArgs.map( e => {
     const startTime = Date.now();
     let queens = Queens(e)
     const elapsedSeconds = (Date.now() - startTime)/1000;
-    
+
     if(typeof queens !== 'string'){
         console.log(`Seconds Elapsed: ${LOG.fg.green}${elapsedSeconds}${LOG.reset}`);
-        
-        printSolution(queens);
-        
+
+        let solution = printSolution(queens);
+
         console.log("\nQueens positions by column:");    
         console.log(queens); 
+        console.log(solution);
     }
 
     typeof queens === 'string' ? console.log(LOG.fg.red, queens, LOG.reset) : {}
-    
 })
