@@ -7,9 +7,9 @@ For this solution we needed to replace the Set() class for simple arrays, this r
 |     :---:       |    :----:   | :--: |     :---:     | :-: |
 |       board_size         | Input Number  | Integer |     |  |
 |      available_rows       | Numbers of the rows available | Array |    `n`   |  |
-|       queens         | Stores the row of each queen  | Array |       `n`      | <img src="./Results-Ss/q.png" alt="q" width="200"/> |
-|      positive_diagonal       | Stores the number of Positive Diagonal which is no more longer available        | Array |    `(n*2)-1`   | <img src="./Results-Ss/Dpos.png" alt="Dpos" width="200"/> |
-|      negative_diagonal       | Stores the number of Negative Diagonal which is no more longer available | Array |    `(n*2)-1`   | <img src="./Results-Ss/Dneg.png" alt="Dneg" width="200"/> |
+|       queens         | Stores the row of each queen  | Array |       `n`      | <img src="../Results-Ss/q.png" alt="q" width="200"/> |
+|      positive_diagonal       | Stores the number of Positive Diagonal which is no more longer available        | Array |    `(n*2)-1`   | <img src="../Results-Ss/Dpos.png" alt="Dpos" width="200"/> |
+|      negative_diagonal       | Stores the number of Negative Diagonal which is no more longer available | Array |    `(n*2)-1`   | <img src="../Results-Ss/Dneg.png" alt="Dneg" width="200"/> |
 
 ---
 ## Installation

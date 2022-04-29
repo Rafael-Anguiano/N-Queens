@@ -8,9 +8,9 @@ For this solution we found very important the use of HashSet objets to reduce th
 |     :---:       |    :----:   | :--: |     :---:     | :-: |
 |       boardSize         | Input Number  | Integer |     |  |
 |      availableRows       | Numbers of the rows available | Array |    `n`   |  |
-|       queens         | Stores the row of each queen  | HashSet |       `n`      | <img src="./Results-Ss/q.png" alt="q" width="200"/> |
-|      positiveDiagonal       | Stores the number of Positive Diagonal which is no more longer available        | HashSet |    `(n*2)-1`   | <img src="./Results-Ss/Dpos.png" alt="Dpos" width="200"/> |
-|      negativeDiagonal       | Stores the number of Negative Diagonal which is no more longer available | HashSet |    `(n*2)-1`   | <img src="./Results-Ss/Dneg.png" alt="Dneg" width="200"/> |
+|       queens         | Stores the row of each queen  | HashSet |       `n`      | <img src="../Results-Ss/q.png" alt="q" width="200"/> |
+|      positiveDiagonal       | Stores the number of Positive Diagonal which is no more longer available        | HashSet |    `(n*2)-1`   | <img src="../Results-Ss/Dpos.png" alt="Dpos" width="200"/> |
+|      negativeDiagonal       | Stores the number of Negative Diagonal which is no more longer available | HashSet |    `(n*2)-1`   | <img src="../Results-Ss/Dneg.png" alt="Dneg" width="200"/> |
 
 
 ---
