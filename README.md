@@ -12,7 +12,7 @@ This is my solution for this problem/puzzle.
  - Made using Javascript.
 
 ## Solution Explanation 
-In this repository there are many solutions in different languages, the best solution is the one in ***JavaScript*** due to the use of HashSet tables, and it´s `has.()` method with complexity **$O(1)$**.
+In this repository there are many solutions in different languages, the best solution is the one in ***JavaScript*** due to the use of HashSet tables, and it´s `has.()` method with complexity ***O(1)***.
 
 * [JavaScript Solution](./JavaScript/)
 * [Python Solution](./Python/)
@@ -28,7 +28,7 @@ To install this repository correctly follow the next steps.
         cd N-Queens/
     ```
 
-2. The next step is to make sure you have a way to run this code, in this situation we will use [Node.js](https://nodejs.org/en/download/), if you don't have it installed, we recommend you to download it.
+2. The next step is to make sure you have a way to run this code, in this situation we will use ***[Node.js](https://nodejs.org/en/download/)*** for *JavasScript* and/or ***[Python](https://www.python.org/downloads/)***, if you don't have it installed, we recommend you to download it.
 
 
 3. Once you have installed a runner, you are ready to start simulating and editing some code. To run this app use the next command in the terminal (Be sure you are in the directory of the language solution you want to run).
