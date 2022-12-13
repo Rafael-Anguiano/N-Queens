@@ -18,9 +18,9 @@ myArgs.map( e => {
 
         let solution = printSolution(queens);
 
-        console.log("\nQueens positions by column:");    
-        console.log(queens); 
-        console.log(solution);
+        // console.log("\nQueens positions by column:");    
+        // console.log(queens); 
+        // console.log(solution);
     }
 
     typeof queens === 'string' ? console.log(LOG.fg.red, queens, LOG.reset) : {}
