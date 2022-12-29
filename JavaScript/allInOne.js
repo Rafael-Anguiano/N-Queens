@@ -75,26 +75,10 @@ function printSolution(queens){
     }
 }
 
-const stateManager = (action, state, row, column, boardSize, valor) => {
-    switch(action){
-        // case 'add':
-        //         state.queens.add(state.availableRows[row]);
-        //         state.positiveDiagonal.add((boardSize-1) - state.availableRows[row] - column);
-        //         state.negativeDiagonal.add(column - state.availableRows[row]);
-        //         let [value] = state.availableRows.splice(row, 1);
-        //     return [state, value]
-        // case 'remove':
-        //         state.availableRows.splice(row, 0, valor)
-        //         state.queens.delete(state.availableRows[row]);
-        //         state.positiveDiagonal.delete((boardSize-1) - state.availableRows[row] - column);
-        //         state.negativeDiagonal.delete(column - state.availableRows[row]);
-        //     return state
-        case 'validate':
-            return  ( !state.queens.has(state.availableRows[row]) &&
-                    !state.positiveDiagonal.has((boardSize-1) - state.availableRows[row] - column) &&
-                    !state.negativeDiagonal.has(column - state.availableRows[row]) )
-    }
-    return state
+const validate = (state, row, column, boardSize) => {
+    return  ( !state.queens.has(state.availableRows[row]) &&
+            !state.positiveDiagonal.has((boardSize-1) - state.availableRows[row] - column) &&
+            !state.negativeDiagonal.has(column - state.availableRows[row]) )
 }
 
 /**
@@ -110,7 +94,7 @@ function PlacingQueens( state, column, boardSize ){
 
     for(row; row < state.availableRows.length; row++){
 
-        if( stateManager('validate', state, row, column, boardSize) ){
+        if( validate(state, row, column, boardSize) ){
 
             state.queens.add(state.availableRows[row]);
             state.positiveDiagonal.add((boardSize-1)-state.availableRows[row]-column);
@@ -134,8 +118,6 @@ function PlacingQueens( state, column, boardSize ){
 
     return [false, state.queens]
 }
-// [state, value] = stateManager('add', state, row, column, boardSize);
-// state = stateManager('remove', state, row, column, boardSize, value);
 
 /**
  * Queens
@@ -167,23 +149,25 @@ function Queens(boardSize){
 
 var myArgs = process.argv.slice(2);
 
-myArgs.map( e => {
+function main(myArgs){
+    myArgs.map( e => {
 
-    console.log(`\n${LOG.fg.cyan}****************N-Queens****************${LOG.reset}`);
-    console.log(`Size of Board: ${LOG.fg.white}${e}${LOG.reset}`);
+        console.log(`\n${LOG.fg.cyan}****************N-Queens****************${LOG.reset}`);
+        console.log(`Size of Board: ${LOG.fg.white}${e}${LOG.reset}`);
 
-    const startTime = Date.now();
-    let queens = Queens(e)
-    const elapsedSeconds = (Date.now() - startTime)/1000;
-    
-    if(typeof queens !== 'string'){
-        console.log(`Seconds Elapsed: ${LOG.fg.green}${elapsedSeconds}${LOG.reset}`);
-        
-        printSolution(queens);
-        
-        console.log("\nQueens positions by column:");    
-        console.log(queens); 
-    }
+        const startTime = Date.now();
+        let queens = Queens(e)
+        const elapsedSeconds = (Date.now() - startTime)/1000;
 
-    typeof queens === 'string' ? console.log(LOG.fg.red, queens, LOG.reset) : {}
-})
+        if(typeof queens !== 'string'){
+            console.log(`Seconds Elapsed: ${LOG.fg.green}${elapsedSeconds}${LOG.reset}`);
+            
+            printSolution(queens);
+            
+            console.log(`\nQueens positions by column (0-${e-1}):`);
+            console.log(queens); 
+        }
+
+        typeof queens === 'string' ? console.log(LOG.fg.red, queens, LOG.reset) : {}
+    })
+}
