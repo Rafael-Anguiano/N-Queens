@@ -4,7 +4,7 @@
 > * Place  N queens on said  N×N   chessboard so that **no two queens threaten each other**. 
 > * The ***Queen*** can move in it's line or row, or diagonally, any number of squares
 
-<img src="https://miro.medium.com/max/500/1*Zm2pbDR5CS2w2xeUbTBxQQ.png" alt="N-Queens Solution Example" width="300"/><img src="https://cdn.iflscience.com/images/69d231d7-9c20-5ed2-86b0-89c782078b22/content-1643203313-1q.jpg" alt="Queen Movement" width="300"/>
+<img src="https://miro.medium.com/max/500/1*Zm2pbDR5CS2w2xeUbTBxQQ.png" alt="N-Queens Solution Example" width="300"/><img src="https://assets.iflscience.com/assets/articleNo/62383/iImg/57275/content-1643203313-1q.jpg" alt="Queen Movement" width="300"/>
 
 ## Description
 This is my solution for this problem/puzzle.
